@@ -1,0 +1,93 @@
+{
+  "name": "babel-webpack-package-boilerplate",
+  "version": "2.0.0",
+  "description": "boilerplate for building an npm package with next-gen javascript transpilation through babel and tree-shaking compilation through webpack",
+  "bin": {
+    "babel-webpack-package-boilerplate": "./bin/main.js"
+  },
+  "main": "./dist/lib.js",
+  "files": [
+    "bin",
+    "config",
+    "dist",
+    "src",
+    ".babelrc",
+    "README.md",
+    "webpack.config.js"
+  ],
+  "directories": {
+    "bin": "./bin",
+    "config": "./config",
+    "dist": "./dist",
+    "src": "./src",
+    "lib": "./src/lib"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=PROD webpack --progress --colors",
+    "build:watch": "cross-env NODE_ENV=DEV webpack --progress --colors --watch --growl",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "test": "npm run lint && npm run test:unit",
+    "test:unit": "cross-env NODE_ENV=TEST mocha-webpack",
+    "test:unit:watch": "cross-env NODE_ENV=TEST mocha-webpack --watch --growl",
+    "prestart": "npm run build",
+    "prepublish": "npm run build",
+    "start": "node ./bin/main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/resisttheurge/babel-webpack-package-boilerplate.git"
+  },
+  "keywords": [
+    "babel",
+    "es2015",
+    "es2015+",
+    "es6",
+    "webpack",
+    "webpack 2",
+    "npm",
+    "yarn",
+    "build",
+    "publishing",
+    "boilerplate"
+  ],
+  "author": "Peter Zastoupil <peterzastoupil@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/resisttheurge/babel-webpack-package-boilerplate/issues"
+  },
+  "homepage": "https://github.com/resisttheurge/babel-webpack-package-boilerplate#readme",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.10",
+    "babel-polyfill": "^6.22.0",
+    "babel-preset-env": "^1.1.8",
+    "babel-preset-stage-0": "^6.22.0",
+    "bind-infix-proxy": "^1.0.0",
+    "chai": "^4.1.2",
+    "cross-env": "^3.1.4",
+    "eslint": "^4.7.2",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "jsverify": "^0.7.4",
+    "mocha": "^3.2.0",
+    "mocha-webpack": "^0.7.0",
+    "prettier": "^1.7.0",
+    "source-map-support": "^0.4.11",
+    "webpack": "^2.2.1"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "DEV",
+      "PROD",
+      "TEST"
+    ]
+  },
+  "dependencies": {
+    "array-flatten": "^2.1.1",
+    "js-combinatorics": "^0.5.2",
+    "moment": "^2.18.1"
+  }
+}
