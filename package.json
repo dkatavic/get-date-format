@@ -1,30 +1,18 @@
 {
-  "name": "babel-webpack-package-boilerplate",
-  "version": "2.0.0",
-  "description": "boilerplate for building an npm package with next-gen javascript transpilation through babel and tree-shaking compilation through webpack",
-  "bin": {
-    "babel-webpack-package-boilerplate": "./bin/main.js"
-  },
-  "main": "./dist/lib.js",
-  "files": [
-    "bin",
-    "config",
-    "dist",
-    "src",
-    ".babelrc",
-    "README.md",
-    "webpack.config.js"
-  ],
+  "name": "get-date-format",
+  "version": "0.0.1",
+  "description":
+    "Module that tries to get the date format out of sample of dates",
+  "main": "./dist/index.js",
   "directories": {
-    "bin": "./bin",
     "config": "./config",
     "dist": "./dist",
-    "src": "./src",
-    "lib": "./src/lib"
+    "src": "./src"
   },
   "scripts": {
     "build": "cross-env NODE_ENV=PROD webpack --progress --colors",
-    "build:watch": "cross-env NODE_ENV=DEV webpack --progress --colors --watch --growl",
+    "build:watch":
+      "cross-env NODE_ENV=DEV webpack --progress --colors --watch --growl",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "test": "npm run lint && npm run test:unit",
@@ -36,27 +24,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/resisttheurge/babel-webpack-package-boilerplate.git"
+    "url":
+      "git+https://github.com/resisttheurge/babel-webpack-package-boilerplate.git"
   },
-  "keywords": [
-    "babel",
-    "es2015",
-    "es2015+",
-    "es6",
-    "webpack",
-    "webpack 2",
-    "npm",
-    "yarn",
-    "build",
-    "publishing",
-    "boilerplate"
-  ],
-  "author": "Peter Zastoupil <peterzastoupil@gmail.com>",
-  "license": "ISC",
+  "keywords": ["date", "get-date-format", "extract-date", "get-date"],
+  "author": "Domagoj Katavic <domo1503@gmail.com>",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/resisttheurge/babel-webpack-package-boilerplate/issues"
+    "url":
+      "https://github.com/resisttheurge/babel-webpack-package-boilerplate/issues"
   },
-  "homepage": "https://github.com/resisttheurge/babel-webpack-package-boilerplate#readme",
+  "homepage":
+    "https://github.com/resisttheurge/babel-webpack-package-boilerplate#readme",
   "devDependencies": {
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
@@ -79,11 +58,7 @@
   },
   "standard": {
     "parser": "babel-eslint",
-    "globals": [
-      "DEV",
-      "PROD",
-      "TEST"
-    ]
+    "globals": ["DEV", "PROD", "TEST"]
   },
   "dependencies": {
     "array-flatten": "^2.1.1",

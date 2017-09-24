@@ -14,7 +14,6 @@ export default ({
   yearFormats = ["YYYY", "YY"],
   delimiters = ["-", "/"]
 }) => {
-  // TODO: Tu sam sta
   // const dayFormats = [ 'DD', 'D']
   // const monthFormats = ['MMM', 'MM', 'M' ]
   // const yearFormats = ['YYYY', 'YY']
@@ -26,10 +25,12 @@ export default ({
 
   const allFormats2Arr = permutatedFormats.map(combos => {
     const cartProduct = comb.cartesianProduct(...combos).toArray();
-    return [
-      ...cartProduct.map(conb => conb.join("-")),
-      ...cartProduct.map(conb => conb.join("/"))
-    ];
+
+    const conb2array = delimiters.map(delimiter =>
+      cartProduct.map(conb => conb.join(delimiter))
+    );
+
+    return flatten(conb2array);
   });
 
   const possibleFormats = flatten(allFormats2Arr);
