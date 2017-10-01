@@ -1,0 +1,3 @@
+- FIX Prettier
+- Fix package.json git references
+- implement CI
