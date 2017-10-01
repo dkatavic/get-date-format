@@ -1,5 +1,5 @@
-import comb from "js-combinatorics";
-import flatten from "array-flatten";
+import comb from "js-combinatorics"
+import flatten from "array-flatten"
 /**
 * Get all date format combinations
 * @param {String[]=['DD', 'D']} dayFormats Array of day formats
@@ -12,7 +12,7 @@ export default ({
   dayFormats = ["DD", "D"],
   monthFormats = ["MMM", "MM", "M"],
   yearFormats = ["YYYY", "YY"],
-  delimiters = ["-", "/"]
+  delimiters = ["-", "/"],
 }) => {
   // const dayFormats = [ 'DD', 'D']
   // const monthFormats = ['MMM', 'MM', 'M' ]
@@ -21,19 +21,19 @@ export default ({
   const permutatedFormats = comb.permutation(
     [dayFormats, monthFormats, yearFormats],
     3
-  );
+  )
 
   const allFormats2Arr = permutatedFormats.map(combos => {
-    const cartProduct = comb.cartesianProduct(...combos).toArray();
+    const cartProduct = comb.cartesianProduct(...combos).toArray()
 
     const conb2array = delimiters.map(delimiter =>
       cartProduct.map(conb => conb.join(delimiter))
-    );
+    )
 
-    return flatten(conb2array);
-  });
+    return flatten(conb2array)
+  })
 
-  const possibleFormats = flatten(allFormats2Arr);
+  const possibleFormats = flatten(allFormats2Arr)
 
-  return possibleFormats;
-};
+  return possibleFormats
+}

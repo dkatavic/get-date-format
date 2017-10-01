@@ -11,14 +11,14 @@ module.exports = {
     sourceType: "module"
   },
   rules: {
-    "prettier/prettier": [
-      "error",
-      {
-        singleQuote: true,
-        jsxBracketSameLine: true,
-        trailingComma: "es5",
-        printWidth: 80
-      }],
+    // "prettier/prettier": [
+    //   "error",
+    //   {
+    //     singleQuote: true,
+    //     jsxBracketSameLine: true,
+    //     trailingComma: "es5",
+    //     printWidth: 80
+    //   }],
     "comma-dangle": ["error", "always-multiline"],
     indent: ["error", 2],
     semi: ["error", "never"]
