@@ -1,3 +1,4 @@
 - FIX Prettier
 - Fix package.json git references
+- Implement babel & webpack that supports node and browser env
 - implement CI

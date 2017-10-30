@@ -9,7 +9,7 @@
     "src": "./src"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=PROD webpack --progress --colors",
+    "build": "babel src -d dist",
     "build:watch": "cross-env NODE_ENV=DEV webpack --progress --colors --watch --growl",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
@@ -18,7 +18,7 @@
     "test:unit:watch": "cross-env NODE_ENV=TEST mocha-webpack --watch --growl",
     "prestart": "npm run build",
     "prepublish": "npm run build",
-    "start": "node ./bin/main"
+    "start": "node ./dist/main"
   },
   "repository": {
     "type": "git",
@@ -37,11 +37,12 @@
   },
   "homepage": "https://github.com/resisttheurge/babel-webpack-package-boilerplate#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
     "babel-polyfill": "^6.22.0",
-    "babel-preset-env": "^1.1.8",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.22.0",
     "bind-infix-proxy": "^1.0.0",
     "chai": "^4.1.2",
