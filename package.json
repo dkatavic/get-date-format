@@ -10,19 +10,17 @@
   },
   "scripts": {
     "build": "babel src -d dist",
-    "build:watch": "cross-env NODE_ENV=DEV webpack --progress --colors --watch --growl",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "test": "npm run lint && npm run test:unit",
-    "test:unit": "cross-env NODE_ENV=TEST mocha-webpack",
-    "test:unit:watch": "cross-env NODE_ENV=TEST mocha-webpack --watch --growl",
+    "test:unit": "cross-env NODE_ENV=TEST jest src",
+    "test:unit:watch": "cross-env NODE_ENV=TEST jest --watch src",
     "prestart": "npm run build",
-    "prepublish": "npm run build",
-    "start": "node ./dist/main"
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/resisttheurge/babel-webpack-package-boilerplate.git"
+    "url": "git+https://github.com/dkatavic/get-date-format.git"
   },
   "keywords": [
     "date",
@@ -33,10 +31,11 @@
   "author": "Domagoj Katavic <domo1503@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/resisttheurge/babel-webpack-package-boilerplate/issues"
+    "url": "https://github.com/dkatavic/get-date-format/issues"
   },
-  "homepage": "https://github.com/resisttheurge/babel-webpack-package-boilerplate#readme",
+  "homepage": "https://github.com/dkatavic/get-date-format#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.0.0-beta.32",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
@@ -50,6 +49,7 @@
     "eslint": "^4.7.2",
     "eslint-config-prettier": "^2.6.0",
     "eslint-plugin-prettier": "^2.3.1",
+    "jest": "^21.2.1",
     "jsverify": "^0.7.4",
     "mocha": "^3.2.0",
     "mocha-webpack": "^0.7.0",
