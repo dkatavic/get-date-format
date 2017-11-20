@@ -1,3 +1,3 @@
 import getDateFormat from './getDateFormat'
 
-export default getDateFormat
+module.exports = getDateFormat
