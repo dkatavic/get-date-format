@@ -7,5 +7,6 @@
 * [ ] codecove
 * [ ] security
 * [ ] remove tests from build (exclude *.test.js while building)
+* [ ] webpack?
 * [ ] review babel implementation for node
 * [ ] review babel implementation for browser
