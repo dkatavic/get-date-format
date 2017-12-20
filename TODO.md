@@ -6,6 +6,7 @@
 * [ ] prettier badge
 * [ ] codecove
 * [ ] security
+* [ ] performance test
 * [ ] remove tests from build (exclude *.test.js while building)
 * [ ] webpack?
 * [ ] review babel implementation for node
