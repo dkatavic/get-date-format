@@ -9,10 +9,10 @@ import flatten from "array-flatten"
 * @return {String[]} conbination of all possible formats
 */
 export default ({
-  dayFormats = ["DD", "D"],
-  monthFormats = ["MMM", "MM", "M"],
+  dayFormats = ["DD", "D", "ddd", "dddd"],
+  monthFormats = ["MMM", "MMMM", "MM", "M"],
   yearFormats = ["YYYY", "YY"],
-  delimiters = ["-", "/"],
+  delimiters = ["-", "/", ".", " "],
 }) => {
   // const dayFormats = [ 'DD', 'D']
   // const monthFormats = ['MMM', 'MM', 'M' ]

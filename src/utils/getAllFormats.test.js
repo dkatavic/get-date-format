@@ -23,5 +23,5 @@ test("Should get all format conbinations", () => {
 
 test("Should use default settings", () => {
   const formats = getAllFormats({})
-  expect(formats.length).to.be.equal(144)
+  expect(formats.length).to.be.equal(768)
 })
