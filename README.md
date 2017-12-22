@@ -1,5 +1,7 @@
 # get-date-format
 
+[![CircleCI](https://circleci.com/gh/dkatavic/get-date-format.svg?style=svg)](https://circleci.com/gh/dkatavic/get-date-format)
+
 Module that extracts date format out of sample of dates
 
 ## Intro
