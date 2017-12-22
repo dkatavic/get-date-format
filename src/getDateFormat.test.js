@@ -41,3 +41,6 @@ test('Should return null if it can`t find format', () => {
   expect(result).to.be.null
 })
 
+test('Should throw if sample of dates is not an array', () => {
+  expect(getDateFormat.bind(null, 'someString')).to.throw('Date samples should be type of Array')
+})

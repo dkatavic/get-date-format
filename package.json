@@ -1,6 +1,6 @@
 {
   "name": "get-date-format",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Module that tries to get the date format out of sample of dates",
   "main": "./dist/lib.js",
   "directories": {
