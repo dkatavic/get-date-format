@@ -4,7 +4,7 @@ Module that extracts date format out of sample of dates
 
 ## Intro
 
-If you have sources of the data with inconsistent date formats, usually it is required to figure out date format of each data set before doing any analysis with the data. This module is trying to solve that issue by extracting date format of the array of the dates. The more elements are in the array, the more accurate is the prediction. 13 consecutive days are enough for accurate prediction of the date format.
+If you have sources of the data with inconsistent date formats, usually it is required to figure out date format of each data set before doing any analysis with the data. This module is trying to solve that issue by extracting date format from the array of the dates. The more elements are in the array, the more accurate is the prediction. 13 consecutive days are enough for accurate prediction of the date format.
 
 This module can detect all official date formats of all the countries represented here https://en.wikipedia.org/wiki/Date_format_by_country
 
@@ -23,7 +23,7 @@ console.log(dateFormat)
 // YYYY-MM-DD
 ```
 
-If date format can't be extracted, function is returning `null``
+If date format can't be extracted, function is returning `null`
 
 ```javascript
 const getDateFormat = require('get-date-format')
