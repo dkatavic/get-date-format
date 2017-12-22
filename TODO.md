@@ -1,7 +1,7 @@
 * [x] FIX Prettier
 * [x] Fix package.json git references
 * [x] Implement babel & webpack that supports node and browser env
-* [ ] implement CI
+* [x] implement CI
 * [ ] remove chai
 * [x] write README.MD
 * [ ] performance optimization in README.MD
