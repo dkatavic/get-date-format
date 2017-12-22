@@ -1,7 +1,5 @@
-import { expect } from 'chai'
 import getSampleOfDates from './getSampleOfDates'
 import moment from 'moment'
-
 
 test('Should get array of dates', () => {
   const dateFormat = 'YYYY-MM-DD'
@@ -15,5 +13,5 @@ test('Should get array of dates', () => {
     '2017-01-05',
   ]
   const value = getSampleOfDates(start, sampleSize, dateFormat)
-  expect(value).to.deep.equal(expected)
+  expect(value).toEqual(expected)
 })

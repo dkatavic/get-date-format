@@ -1,6 +1,4 @@
-import { expect } from "chai"
 import getAllFormats from "./getAllFormats"
-
 
 test("Should get all format conbinations", () => {
   const input = {
@@ -18,10 +16,10 @@ test("Should get all format conbinations", () => {
     "YYYY-M-D",
   ]
   const result = getAllFormats(input)
-  expect(result).to.deep.equal(expected)
+  expect(result).toEqual(expected)
 })
 
 test("Should use default settings", () => {
   const formats = getAllFormats({})
-  expect(formats.length).to.be.equal(768)
+  expect(formats.length).toEqual(768)
 })

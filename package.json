@@ -1,6 +1,6 @@
 {
   "name": "get-date-format",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Module that tries to get the date format out of sample of dates",
   "main": "./dist/lib.js",
   "directories": {
@@ -44,18 +44,14 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.22.0",
     "bind-infix-proxy": "^1.0.0",
-    "chai": "^4.1.2",
     "cross-env": "^3.1.4",
     "eslint": "^4.7.2",
     "eslint-config-prettier": "^2.6.0",
     "eslint-plugin-prettier": "^2.3.1",
     "jest": "^21.2.1",
     "jsverify": "^0.7.4",
-    "mocha": "^3.2.0",
-    "mocha-webpack": "^0.7.0",
     "prettier": "^1.7.0",
-    "source-map-support": "^0.4.11",
-    "webpack": "^2.2.1"
+    "source-map-support": "^0.4.11"
   },
   "standard": {
     "parser": "babel-eslint",
